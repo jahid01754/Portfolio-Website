@@ -5,7 +5,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Added */
+  --bg-color: #fff5eb;
+  --bg-color-btn: #ff6b00;
 }
+
+/* This section is Added */
+.bg-dynamic {
+  background-color: var(--bg-color);
+}
+.bg-btn {
+  background-color: var(--bg-color-btn);
+}
+
+.floating {
+  @apply animate-diagonalFloat;
+}
+
+/* till here */
 
 @media (prefers-color-scheme: dark) {
   :root {

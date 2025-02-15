@@ -20,6 +20,7 @@
 
 .floating {
   @apply animate-diagonalFloat;
+  @apply animate-upDownFloat;
 }
 
 /* till here */

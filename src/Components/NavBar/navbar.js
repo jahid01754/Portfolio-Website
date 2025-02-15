@@ -9,16 +9,16 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
 
   const NavLink1 = ({ href, children }) => (
+    //function for Navigation Link
     <Link href={href} className="group overflow-hidden py-5 ">
-      {/* <div className="bg-yellow-500 w-full h-[2px] translate-x-[101%] group-hover:translate-x-0 transition-all duration-500"></div> */}
       {children}
       <div className="transition-all duration-500 w-full bg-btn -translate-x-[101%] group-hover:translate-x-0 h-[2px] "></div>
     </Link>
   );
   return (
     <>
-      <div className="relative">
-        <nav className="container mx-auto flex justify-between h-[100px]  bg-dynamic md:bg-white  top-0 relative">
+      <div className="relative w-full bg-dynamic md:bg-white">
+        <nav className="container mx-auto flex justify-between h-[100px]  bg-dynamic md:bg-white  top-0 relative s">
           <div className="flex  justify-center items-center">
             {/* <p className="">Choion</p> */}
             <Image
@@ -37,7 +37,7 @@ export default function Navbar() {
             <NavLink1 href="/Portfolio">Portfolio</NavLink1>
             <NavLink1 href="/Blog">Blog</NavLink1>
           </div>
-          <div className="hidden md:flex  justify-center items-center">
+          <div className="hidden md:flex justify-center items-center  ">
             <Button />
           </div>
           <div className="md:hidden flex items-center justify-end">

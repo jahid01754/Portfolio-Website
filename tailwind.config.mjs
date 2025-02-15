@@ -1,3 +1,5 @@
+import { transform } from "next/dist/build/swc/generated-native";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -10,24 +12,20 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
-    },
-  },
-  plugins: [],
-
-  // adding
-  theme: {
-    extend: {
-      colors: {
         primary: "#FF6B00",
       },
       animation: {
         diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
+        upDownFloat: "upDownFloat 2s ease-in-out infinite",
       },
       keyframes: {
         diagonalFloat: {
           "0%, 100%": { transform: "translate(0, 0)" }, // Start & end at original position
           "50%": { transform: "translate(-20px, -20px)" }, // Move diagonally up-right
+        },
+        upDownFloat: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
         },
       },
     },

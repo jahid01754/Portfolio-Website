@@ -14,7 +14,7 @@ export default function HomeBanner() {
           />
         </div>
         <div className="flex flex-col justify-center items-center order-2 lg:order1 mt-10">
-          <div className="container flex flex-row items-center justify-start w-full">
+          <div className="container  flex flex-row items-center justify-start w-full">
             <Image
               src="/pic/orangeDot.png"
               alt="Orange Dot"
@@ -25,27 +25,27 @@ export default function HomeBanner() {
 
             <h1 className="text-xl">I am a Frontend Developer</h1>
           </div>
-          <div className="container mt-4 flex flex-row">
-            <p className="text-black text-[50px] font-bold">
-              Creative Design and Web
-            </p>
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                " Design",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                " Solutions",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              // style={{ fontSize: "2em", display: "inline-block" }}
-              className=" text-[50px] md:text-4xl font-bold text-blue-600 inline-block"
-              repeat={Infinity}
-            />
+
+          <div className="container mt-4 flex flex-row text-[50px] font-bold">
+            Creative Design and Web{" "}
+            <span className="ml-2 text-orange-500">
+              <TypeAnimation
+                sequence={[
+                  "Design", // First word
+                  1000, // Wait 1s
+                  "Solutions", // Second word
+                  1000, // Wait 1s
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                cursor={false}
+              />
+            </span>
           </div>
+
           <div>
-            <p>
+            <p className="container">
               Nam libero tempore, cum soluta nobis est eligendi optio cumque
               nihil impedit quo minus id quod maxime placeat facere possimus,
               omnis voluptas assumenda est, omnis dolor repellendus. Temporibus

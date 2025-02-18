@@ -17,9 +17,9 @@ export default function Navbar() {
   );
   return (
     <>
-      <div className="relative w-full bg-dynamic md:bg-white">
-        <nav className="container mx-auto flex justify-between h-[100px]  bg-dynamic md:bg-white  top-0 relative s">
-          <div className="flex  justify-center items-center">
+      <div className=" w-full bg-dynamic md:bg-white py-8">
+        <nav className="container mx-auto flex justify-between h-[100px]  bg-dynamic md:bg-white  top-0  ">
+          <div className="flex  justify-center items-center px-4">
             {/* <p className="">Choion</p> */}
             <Image
               src="/pic/Logo.png"
@@ -40,7 +40,7 @@ export default function Navbar() {
           <div className="hidden md:flex justify-center items-center  ">
             <Button />
           </div>
-          <div className="md:hidden flex items-center justify-end">
+          <div className="md:hidden flex items-center justify-center px-4">
             <GrMenu
               className={`cursor-pointer w-8 h-8 ${menu ? "hidden" : ""}`}
               onClick={() => setMenu(true)}

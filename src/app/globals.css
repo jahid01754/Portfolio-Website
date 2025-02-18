@@ -23,6 +23,12 @@
   @apply animate-upDownFloat;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /* till here */
 
 @media (prefers-color-scheme: dark) {

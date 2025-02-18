@@ -12,13 +12,13 @@ export default function Navbar() {
     //function for Navigation Link
     <Link href={href} className="group overflow-hidden py-5 ">
       {children}
-      <div className="transition-all duration-500 w-full bg-btn -translate-x-[101%] group-hover:translate-x-0 h-[2px] "></div>
+      <div className="transition-all duration-500 w-full bg-btn -translate-x-[101%] group-hover:translate-x-0 h-[2px]"></div>
     </Link>
   );
   return (
     <>
       <div className=" w-full bg-dynamic md:bg-white py-8">
-        <nav className="container mx-auto flex justify-between h-[100px]  bg-dynamic md:bg-white  top-0  ">
+        <nav className="container mx-auto flex justify-between h-[85px]  bg-dynamic md:bg-white  top-0  ">
           <div className="flex  justify-center items-center px-4">
             {/* <p className="">Choion</p> */}
             <Image
@@ -29,7 +29,7 @@ export default function Navbar() {
               className="h-fit w-fit"
             />
           </div>
-          <div className="hidden md:flex  justify-center items-center gap-6">
+          <div className="hidden md:flex  justify-center items-center gap-6  ">
             <NavLink1 href="">Home</NavLink1>
             <NavLink1 href="/About">About</NavLink1>
             <NavLink1 href="/Services">Services</NavLink1>
@@ -38,7 +38,7 @@ export default function Navbar() {
             <NavLink1 href="/Blog">Blog</NavLink1>
           </div>
           <div className="hidden md:flex justify-center items-center  ">
-            <Button />
+            <Button label={"Contact Us"} />
           </div>
           <div className="md:hidden flex items-center justify-center px-4">
             <GrMenu

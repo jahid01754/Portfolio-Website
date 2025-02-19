@@ -5,18 +5,19 @@ export default function HomeBanner() {
   return (
     <>
       <section className="bg-dynamic">
+        <div className="relative flex justify-center items-center w-full">
+          <Image
+            src="/pic/particleOne.png"
+            alt="Moving Particle"
+            width="100"
+            height="150"
+            className="absolute animate-upDownFloat w-[4vw] max-w-[120px] min-w-[50px] h-auto left-[5%]
+               top-[16vh] md:top-[6vh] sm:top-[-5vh] xs:top-[-15vh]"
+          />
+        </div>
         <div className="container mx-auto bg-dynamic ">
-          <div className=" flex flex-col lg:flex-row justify-between items-center px-4 w-[100%]  overflow-hidden">
+          <div className="flex flex-col lg:flex-row justify-between items-center px-4 w-[100%]  overflow-hidden">
             {/* Floating Particle */}
-            <div className="flex justify-center items-center order-2 lg:order1">
-              <Image
-                src="/pic/particleOne.png"
-                alt="Moving Particle"
-                width="100"
-                height="150"
-                className="absolute top-48 left-[10%] animate-upDownFloat max-w-[90%] sm:max-w-[100px]"
-              />
-            </div>
 
             {/* Left Section */}
             <div className=" flex flex-col justify-center items-center order-2 lg:order1 mt-5 sm:mt-10">
@@ -42,7 +43,7 @@ export default function HomeBanner() {
                       sequence={[
                         "Design", // First word
                         1000, // Wait 1s
-                        "Solutions", // Second word
+                        "Solution", // Second word
                         1000, // Wait 1s
                       ]}
                       wrapper="span"
@@ -61,28 +62,29 @@ export default function HomeBanner() {
                     repellendus. Temporibus autem quibusdam et.
                   </p>
                 </div>
-                <div className="relative mt-10 mb-10 flex flex-row  items-center">
+                <div className="mt-10 ">
                   <Button label={"Download my CV"} />
-                  <Image
-                    src="/pic/particleTwo.png"
-                    alt="Moving Particle"
-                    width="100"
-                    height="150"
-                    className="absolute animate-upDownFloat -top-0 left-[60%]"
-                  />
                 </div>
               </div>
+              <Image
+                src={"/pic/particleTwo.png"}
+                alt="Moving particle two"
+                width={75}
+                height={75}
+                className="animate-upDownFloat  mr-20"
+              />
             </div>
 
             {/* Right Section */}
-            <div className="z-[0] flex justify-center items-center order-1 lg:order-2">
-              <div className="absolute animate-diagonalFloat top-48 right-88">
+            <div className="relative flex justify-center items-center order-1 lg:order-2 w-full">
+              <div className="absolute  w-fit h-auto">
                 {/* <div className="absolute top-14 right-auto animate-diagonalFloat translate-x-4  md:left-auto"> */}
                 <Image
                   src="/pic/homeBannerShape.png"
                   alt="Background Image"
                   width="500"
                   height="700"
+                  className="animate-diagonalFloat"
                 />
               </div>
 

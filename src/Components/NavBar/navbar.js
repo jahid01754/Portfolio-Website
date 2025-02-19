@@ -17,8 +17,8 @@ export default function Navbar() {
   );
   return (
     <>
-      <div className=" w-full bg-dynamic md:bg-white py-8">
-        <nav className="container mx-auto flex justify-between h-[85px]  bg-dynamic md:bg-white  top-0  ">
+      <div className=" w-full bg-dynamic md:bg-white py-8 mx-2">
+        <nav className="container mx-auto  flex justify-between h-[85px]  bg-dynamic md:bg-white  top-0 m ">
           <div className="flex  justify-center items-center px-4">
             {/* <p className="">Choion</p> */}
             <Image

@@ -14,11 +14,11 @@ export default {
         foreground: "var(--foreground)",
         primary: "#FF6B00",
       },
-      container: {
-        padding: {
-          DEFAULT: "3rem",
-        },
-      },
+      // container: {
+      //   padding: {
+      //     DEFAULT: "3rem",
+      //   },
+      // },
       animation: {
         diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
         upDownFloat: "upDownFloat 2s ease-in-out infinite",

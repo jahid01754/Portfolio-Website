@@ -29,6 +29,21 @@ body {
   width: 100%;
 }
 
+/* riseUp Animation */
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-up {
+  animation: riseUp 1s ease-out forwards;
+}
 /* till here */
 
 @media (prefers-color-scheme: dark) {

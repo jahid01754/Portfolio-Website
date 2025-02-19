@@ -35,10 +35,10 @@ export default function HomeBanner() {
                 </div>
 
                 <div className="w-full mt-4 text-[50px] font-bold  ">
-                  <span className="text-[90px]">
+                  <span className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[90px] font-bold">
                     Creative Design and Web&nbsp;{" "}
                   </span>
-                  <span className=" text-orange-500  text-[90px]">
+                  <span className=" text-orange-500  text-[50px] md:text-[70px] lg:text-[90px]">
                     <TypeAnimation
                       sequence={[
                         "Design", // First word

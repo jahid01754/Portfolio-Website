@@ -2,6 +2,8 @@ import Image from "next/image";
 import Button from "../Button/button";
 import { FaRegSquareCheck } from "react-icons/fa6";
 import { useInView } from "react-intersection-observer";
+import CountUp from "react-countup";
+import { useEffect, useState } from "react";
 
 export default function AboutSection() {
   const [experienceRef, experienceInView] = useInView({
@@ -11,6 +13,14 @@ export default function AboutSection() {
   const [buttonRef, buttonInView] = useInView({
     threshold: 0.1,
   });
+
+  const [startAnimation, setStartAnimation] = useState(false);
+  useEffect(() => {
+    if (experienceInView) {
+      setStartAnimation(true);
+    }
+  }, [experienceInView]);
+
   return (
     <>
       <div className="bg-white border m-4">
@@ -60,7 +70,15 @@ export default function AboutSection() {
                     className="w-full h-auto max-w-[60px] max-h-[60px] flex-shrink-0 md:w-[50px] lg:w-[60px] lg:h-[60px]"
                   />
                   <div>
-                    <h2 className="text-primary text-xl font-bold">0+</h2>
+                    <h2 className="text-primary text-xl font-bold">
+                      <CountUp
+                        start={0}
+                        end={startAnimation ? 100 : 0}
+                        duration={2}
+                        separator=","
+                      />
+                      +
+                    </h2>
                     <h2 className="text-lg lg:text-xl font-semibold">
                       Complete Project
                     </h2>
@@ -77,7 +95,15 @@ export default function AboutSection() {
                     className="max-w-[60px] max-h-[60px] flex-shrink-0 md:w-[50px]"
                   />
                   <div>
-                    <h2 className="text-primary text-xl font-bold">0+</h2>
+                    <h2 className="text-primary text-xl font-bold">
+                      <CountUp
+                        start={0}
+                        end={startAnimation ? 2 : 0}
+                        duration={2}
+                        separator=","
+                      />
+                      +
+                    </h2>
                     <h2 className="text-lg lg:text-xl font-semibold">
                       Year Of Experience
                     </h2>

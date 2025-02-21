@@ -53,7 +53,7 @@ export default function ServiceSection() {
   ];
   return (
     <>
-      <div className="sm:bg-dynamic md:bg-white mx-4">
+      <div className="bg-white mx-4 py-20">
         <div className="container mx-auto">
           {/* Heading */}
           <div className="flex flex-col justify-center items-center">
@@ -73,25 +73,24 @@ export default function ServiceSection() {
           </div>
 
           {/* Content */}
-          <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 ">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col justify-center items-center border border-orange-200  w-full p-10 hover:bg-lightOrange transition-all duration-200 rounded-lg hover:shadow-sm "
-                >
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={30}
-                    height={30}
-                    className="w-full h-auto max-w-14 max-h-14"
-                  />
-                  <p className="mt-4">{service.title}</p>
-                  <p className="mt-4 text-center">{service.description}</p>
-                </div>
-              ))}
-            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 ">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center border border-orange-200  w-full p-10 hover:bg-lightOrange transition-all duration-200 rounded-lg hover:shadow-sm "
+              >
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={30}
+                  height={30}
+                  className="w-full h-auto max-w-14 max-h-14"
+                />
+                <p className="mt-4">{service.title}</p>
+                <p className="mt-4 text-center">{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

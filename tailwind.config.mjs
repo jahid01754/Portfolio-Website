@@ -13,6 +13,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#FF6B00",
+        lightOrange: "#FFF5EB",
       },
       // container: {
       //   padding: {

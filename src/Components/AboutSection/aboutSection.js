@@ -18,12 +18,14 @@ export default function AboutSection() {
   useEffect(() => {
     if (experienceInView) {
       setStartAnimation(true);
+    } else {
+      setStartAnimation(false);
     }
   }, [experienceInView]);
 
   return (
     <>
-      <div className="bg-white border m-4">
+      <div className="bg-white  mx-4">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center py-20 md:py-40 gap-10 md:gap-20">
             {/* Left Section */}
@@ -41,7 +43,7 @@ export default function AboutSection() {
               <div className="flex items-center gap-2 mb-4">
                 <Image
                   src={"/pic/orangeDot.png"}
-                  alt="About me icon"
+                  alt="Orange Dot Icon"
                   width={20}
                   height={20}
                   className=""

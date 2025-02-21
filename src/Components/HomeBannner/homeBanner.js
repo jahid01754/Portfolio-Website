@@ -36,7 +36,7 @@ export default function HomeBanner() {
 
                 <div className="w-full mt-4 text-[50px] font-bold  ">
                   <span className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[90px] font-bold">
-                    Creative Design and Web&nbsp;{" "}
+                    Creative Design and Web{""}
                   </span>
                   <span className=" text-orange-500  text-[50px] md:text-[70px] lg:text-[90px]">
                     <TypeAnimation
@@ -55,7 +55,7 @@ export default function HomeBanner() {
                 </div>
 
                 <div className="mt-4 text-[20px]">
-                  <p className="text-justify">
+                  <p className="text-justify lg:text-[18px]">
                     Nam libero tempore, cum soluta nobis est eligendi optio
                     cumque nihil impedit quo minus id quod maxime placeat facere
                     possimus, omnis voluptas assumenda est, omnis dolor
@@ -76,7 +76,7 @@ export default function HomeBanner() {
             </div>
 
             {/* Right Section */}
-            <div className="relative flex justify-center items-center order-1 lg:order-2 w-full">
+            <div className="relative flex justify-center items-center order-1 lg:order-2 w-full ">
               <div className="absolute  w-fit h-auto">
                 {/* <div className="absolute top-14 right-auto animate-diagonalFloat translate-x-4  md:left-auto"> */}
                 <Image
@@ -88,13 +88,13 @@ export default function HomeBanner() {
                 />
               </div>
 
-              <div className="relative">
+              <div className="relative ">
                 <Image
                   src="/pic/bannerimg.png"
                   alt="Overlay Image"
                   width="1550"
                   height="1800"
-                  className=""
+                  className="w-full h-auto lg:min-w-[500px]"
                 />
               </div>
             </div>

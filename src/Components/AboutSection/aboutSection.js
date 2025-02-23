@@ -53,7 +53,7 @@ export default function AboutSection() {
               <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold mb-6">
                 I Can Design Anything You Want
               </h2>
-              <p className="text-gray-600 text-md md:text-lg leading-relaxed">
+              <p className="text-gray-600 text-md md:text-lg leading-relaxed text-justify ">
                 uod maxime placeat facere possimus, omnis voluptas assumenda
                 est, omnis dolor repellendus. Temporibus autem quibusdam et aut
                 officiis. Nam libero tempore, cum soluta nobis est eligendi

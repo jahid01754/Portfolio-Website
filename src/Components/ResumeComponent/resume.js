@@ -15,7 +15,9 @@ export default function ResumeComponent() {
             <p className="">My Resume</p>
           </div>
           <div>
-            <p className="font-bold text-5xl mt-6">10+ Years of Experience</p>
+            <p className="font-bold text-5xl mt-6 text-center">
+              10+ Years of Experience
+            </p>
           </div>
         </div>
         <div className="lg:flex lg:flex-row mt-20">
@@ -26,59 +28,133 @@ export default function ResumeComponent() {
           </div>
 
           {/* Experience Description */}
-          <div className="w-full">
-            <div className="bg-white flex flex-row justify-between item-center  w-full h-auto gap-4">
-              <div className="flex flex-col justify-center items-center p-4">
-                <p>BSc in Computer Science</p>
-                <p>University of ULAV (2018-2022)</p>
-                <p>Pomnis voluptas assumenda est, omnis dolor repellendus.</p>
+          <div className="w-full h-auto ">
+            {/* 1st layer */}
+            <div className="bg-white flex flex-col lg:flex-row justify-between item-center  w-full h-auto gap-4 rounded-lg">
+              {/* 1st */}
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4 relative">
+                <p className="font-bold text-xl">BSc in Computer Science</p>
+                <p className="text-stone-600">University of ULAV (2018-2022)</p>
+                <p className="text-stone-600 break-words text-center">
+                  Pomnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+                <div className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-[2px] h-36 bg-gray-300 invisible lg:visible"></div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <p>AS-Science & Information</p>
-                <p>University of ULAV (2016-2018)</p>
-                <p>Pomnis voluptas assumenda est, omnis dolor repellendus.</p>
+
+              {/* 2nd */}
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4 relative">
+                <p className="font-bold text-xl">AS-Science & Information</p>
+                <p className="text-stone-600">University of ULAV (2016-2018)</p>
+                <p className="text-stone-600 break-words text-center">
+                  Pomnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+                <div className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-[2px] h-36 bg-gray-300 invisible lg:visible"></div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <p>Secondary School Education</p>
-                <p>kindergarten(2006-2016)</p>
-                <p>Pomnis voluptas assumenda est, omnis dolor repellendus.</p>
-              </div>
-            </div>
-            <div className="bg-white flex flex-row justify-between items-center w-full h-auto mt-10">
-              <div>
-                <p>UI/UX Design</p>
-                <p>Figma 90%</p>
-                <p>Adobe XD 85%</p>
-                <p>Photoshop 80%</p>
-              </div>
-              <div>
-                <p>Web Developer</p>
-                <p>WordPress 90%</p>
-                <p>Mockplus 85%</p>
-                <p>Weebly 80%</p>
-              </div>
-              <div>
-                <p>App Development</p>
-                <p>Quixy 92%</p>
-                <p>AppyPie 87%</p>
-                <p>iBuildApp 82%</p>
+
+              {/* 3rd */}
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4">
+                <p className="font-bold text-xl">Secondary School Education</p>
+                <p className="text-stone-600">kindergarten(2006-2016)</p>
+                <p className="text-stone-600 break-words text-center">
+                  Pomnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
               </div>
             </div>
-            <div className="bg-white flex flex-row justify-between items-center w-full h-auto gap-4 p-4 mt-10">
-              <div className="flex flex-col justify-center items-center ">
-                <p>Web Developer & Trainer</p>
-                <p>Brac Developer Team-(2012-2016)</p>
-                <p>Pomnis voluptas assumenda est, omnis dolor repellendus.</p>
+
+            {/* 2nd layer */}
+            <div className="bg-white flex flex-col lg:flex-row  justify-around items-start lg:items-center w-full h-auto mt-10 gap-4 rounded-lg">
+              {/* 1st */}
+              <div className="flex flex-col justify-stretch items-center w-full min-h-[200px] p-4 relative">
+                <p className="font-bold text-xl">UI/UX Design</p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>Figma</span>
+                  <span className="flex-1 border border-gray-300 mx-2 "></span>
+                  <span>90%</span>
+                </p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>Adobe XD</span>
+                  <span className="flex-1 border border-gray-300 mx-2"></span>
+                  <span>85%</span>
+                </p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>Photoshop</span>
+                  <span className="flex-1 border border-gray-300 mx-2"></span>
+                  <span>80%</span>
+                </p>
+                <div className="absolute bg-gray-300 w-[2px] h-36 -right-2 top-1/2 transform -translate-y-1/2 invisible lg:visible"></div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <p>Front-end Developer</p>
-                <p>Brane-(2020-2011)</p>
-                <p>Pomnis voluptas assumenda est, omnis dolor repellendus.</p>
+
+              {/* 2nd */}
+              <div className="flex flex-col justify-stretch items-center w-full min-h-[200px] p-4 relative">
+                <p className="font-bold text-xl">Web Developer</p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>WordPress</span>
+                  <span className="flex-1 border border-gray-300 mx-2"></span>
+                  <span>90%</span>
+                </p>
+                <p className="text-stone-600 container flex justify-center items-center w-full">
+                  <span>Mockplus</span>
+                  <span className="flex-1 border border-gray-300 mx-2"></span>
+                  <span>85%</span>
+                </p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>Weebly</span>
+                  <span className="flex-1 border border-gray-300 mx-2"></span>
+                  <span>80%</span>
+                </p>
+                <div className="absolute bg-gray-300 w-[2px] h-36 -right-2 top-1/2 transform -translate-y-1/2 invisible lg:visible"></div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <p>UI/UX Designer</p>
-                <p>Google Out Tech-(2017-Present)</p>
-                <p>Pomnis voluptas assumenda est, omnis dolor repellendus.</p>
+
+              {/* 3rd */}
+              <div className="flex flex-col justify-stretch items-center w-full min-h-[200px] p-4">
+                <p className="font-bold text-xl">App Development</p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>Quixy</span>
+                  <span className="flex-1 border border-gray-300 mx-2"></span>
+                  <span>92%</span>
+                </p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>AppyPie</span>
+                  <span className="inline-block border border-gray-300 mx-2 w-[78%]"></span>
+                  <span>87%</span>
+                </p>
+                <p className="text-stone-600 container flex justify-between items-center w-full">
+                  <span>iBuildApp</span>
+                  <span className="flex-1 border border-gray-300 mx-2"></span>
+                  <span>82%</span>
+                </p>
+              </div>
+            </div>
+
+            {/* 3rd layer */}
+            <div className="bg-white flex flex-col lg:flex-row justify-between items-center w-full h-auto gap-4 p-4 mt-10 rounded-lg">
+              {/* 1st */}
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4">
+                <p className="font-bold text-xl">Web Developer & Trainer</p>
+                <p className="text-stone-600">
+                  Brac Developer Team-(2012-2016)
+                </p>
+                <p className="text-stone-600">
+                  Pomnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+              </div>
+
+              {/* 2nd */}
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4">
+                <p className="font-bold text-xl">Front-end Developer</p>
+                <p className="text-stone-600">Brane-(2020-2011)</p>
+                <p className="text-stone-600">
+                  Pomnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+              </div>
+
+              {/* 3rd */}
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4">
+                <p className="font-bold text-xl">UI/UX Designer</p>
+                <p className="text-stone-600">Google Out Tech-(2017-Present)</p>
+                <p className="text-stone-600">
+                  Pomnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
               </div>
             </div>
           </div>

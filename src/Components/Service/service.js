@@ -65,10 +65,12 @@ export default function ServiceSection() {
                 height={5}
                 className="w-full h-auto max-w-5 max-h-5"
               />
-              <p className="">My Service</p>
+              <p className=" text-center">My Service</p>
             </div>
             <div>
-              <p className="font-bold text-5xl mt-6">Services I Offer</p>
+              <p className="font-bold text-5xl mt-6 text-center">
+                Services I Offer
+              </p>
             </div>
           </div>
 

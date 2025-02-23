@@ -22,9 +22,18 @@ export default function ResumeComponent() {
         </div>
         <div className="lg:flex lg:flex-row mt-20">
           {/* Vertical Line */}
-          <div className="invisible lg:visible">
-            <div className="">Vertical Straight Line</div>
-            <div className="">circle Dot</div>
+          <div className="lg:flex w-full ">
+            <div className="invisible lg:visible flex flex-col  relative">
+              <div className="absolute bg-gray-400 w-[2px] h-full"></div>
+              <div className="absolute left-12 top-[80px] -translate-x-1/2 flex items-center gap-4">
+                <div className=" bg-orange-600 w-4 h-4 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p className="text-gray-700 font-bold whitespace-nowrap">
+              Education
+            </p>
           </div>
 
           {/* Experience Description */}
@@ -38,6 +47,7 @@ export default function ResumeComponent() {
                 <p className="text-stone-600 break-words text-center">
                   Pomnis voluptas assumenda est, omnis dolor repellendus.
                 </p>
+                {/* verticle Line */}
                 <div className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-[2px] h-36 bg-gray-300 invisible lg:visible"></div>
               </div>
 
@@ -48,6 +58,7 @@ export default function ResumeComponent() {
                 <p className="text-stone-600 break-words text-center">
                   Pomnis voluptas assumenda est, omnis dolor repellendus.
                 </p>
+                {/* verticle Line */}
                 <div className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-[2px] h-36 bg-gray-300 invisible lg:visible"></div>
               </div>
 
@@ -81,6 +92,7 @@ export default function ResumeComponent() {
                   <span className="flex-1 border border-gray-300 mx-2"></span>
                   <span>80%</span>
                 </p>
+                {/* verticle Line */}
                 <div className="absolute bg-gray-300 w-[2px] h-36 -right-2 top-1/2 transform -translate-y-1/2 invisible lg:visible"></div>
               </div>
 
@@ -102,6 +114,7 @@ export default function ResumeComponent() {
                   <span className="flex-1 border border-gray-300 mx-2"></span>
                   <span>80%</span>
                 </p>
+                {/* verticle Line */}
                 <div className="absolute bg-gray-300 w-[2px] h-36 -right-2 top-1/2 transform -translate-y-1/2 invisible lg:visible"></div>
               </div>
 
@@ -129,7 +142,7 @@ export default function ResumeComponent() {
             {/* 3rd layer */}
             <div className="bg-white flex flex-col lg:flex-row justify-between items-center w-full h-auto gap-4 p-4 mt-10 rounded-lg">
               {/* 1st */}
-              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4">
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4 relative">
                 <p className="font-bold text-xl">Web Developer & Trainer</p>
                 <p className="text-stone-600">
                   Brac Developer Team-(2012-2016)
@@ -137,15 +150,18 @@ export default function ResumeComponent() {
                 <p className="text-stone-600">
                   Pomnis voluptas assumenda est, omnis dolor repellendus.
                 </p>
+                {/* straight Line */}
+                <div className="absolute bg-gray-300 w-[2px] h-36 -right-2 top-1/2 transform -translate-y-1/2 invisible lg:visible"></div>
               </div>
 
               {/* 2nd */}
-              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4">
+              <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4 relative">
                 <p className="font-bold text-xl">Front-end Developer</p>
                 <p className="text-stone-600">Brane-(2020-2011)</p>
                 <p className="text-stone-600">
                   Pomnis voluptas assumenda est, omnis dolor repellendus.
                 </p>
+                <div className="absolute bg-gray-300 w-[2px] h-36 -right-2 top-1/2 transform -translate-y-1/2 invisible lg:visible"></div>
               </div>
 
               {/* 3rd */}

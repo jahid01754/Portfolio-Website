@@ -4,7 +4,6 @@ import AboutSection from "@/Components/AboutSection/aboutSection";
 import HomeBanner from "@/Components/HomeBannner/homeBanner";
 import Navbar from "@/Components/NavBar/navbar";
 import ServiceSection from "@/Components/Service/service";
-import Resume from "./Resume/page";
 import ResumeComponent from "@/Components/ResumeComponent/resume";
 
 export default function Home() {

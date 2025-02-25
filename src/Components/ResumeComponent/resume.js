@@ -33,7 +33,7 @@ export default function ResumeComponent() {
               height={5}
               className="w-full h-auto max-w-5 max-h-5"
             />
-            <p className="">My Resume</p>
+            <p>My Resume</p>
           </div>
           <div>
             <p className="font-bold text-5xl mt-6 text-center">

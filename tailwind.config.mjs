@@ -14,6 +14,7 @@ export default {
         foreground: "var(--foreground)",
         primary: "#FF6B00",
         lightOrange: "#FFF5EB",
+        feedback: "#FFF5EF",
       },
       // container: {
       //   padding: {

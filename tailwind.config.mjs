@@ -23,6 +23,7 @@ export default {
       animation: {
         diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
         upDownFloat: "upDownFloat 2s ease-in-out infinite",
+        // "rise-up": "rise-up 1s ease-out forwords",
       },
       keyframes: {
         diagonalFloat: {
@@ -33,6 +34,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-20px)" },
         },
+        // "rise-up": {
+        //   "0%": { opacity: "0", transform: "translateY(50pc)" },
+        //   "100%": { opacity: "1", transform: "translateY(0)" },
+        // },
       },
     },
   },

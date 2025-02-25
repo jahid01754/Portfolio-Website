@@ -1,5 +1,26 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+
 export default function ResumeComponent() {
+  const [layerOneRef, layerOneInView] = useInView({
+    threshold: 0.2,
+  });
+  const [layerTwoRef, layerTwoInView] = useInView({
+    threshold: 0.2,
+  });
+  const [layerThreeRef, layerThreeInView] = useInView({
+    threshold: 0.2,
+  });
+  const [resume, setResume] = useState(false);
+  useEffect(() => {
+    // if (layerOneInView || layerTwoInView || layerThreeInView) {
+    //   setResume(true);
+    // } else {
+    //   setResume(false);
+    // }
+    setResume(layerOneInView || layerTwoInView || layerThreeInView);
+  }, [layerOneInView, layerTwoInView, layerThreeInView]);
   return (
     <>
       <div className="container mx-auto">
@@ -20,26 +41,32 @@ export default function ResumeComponent() {
             </p>
           </div>
         </div>
-        <div className="lg:flex lg:flex-row mt-20">
-          {/* Vertical Line */}
-          <div className="lg:flex w-full ">
-            <div className="invisible lg:visible flex flex-col  relative">
-              <div className="absolute bg-gray-400 w-[2px] h-full"></div>
-              <div className="absolute left-12 top-[80px] -translate-x-1/2 flex items-center gap-4">
-                <div className=" bg-orange-600 w-4 h-4 rounded-full"></div>
-              </div>
-            </div>
+        <div className="lg:flex lg:flex-row mt-20 px-4">
+          {/* Vertical Line and Circle  */}
+
+          <div className="invisible lg:visible relative">
+            <div className="absolute bg-gray-400 w-[2px] h-full"></div>
+            <div className="absolute bg-orange-600 w-4 h-4 rounded-full top-[110px] -translate-x-[7px]"></div>
+            <div className="absolute bg-orange-600 w-4 h-4 rounded-full top-[348px] -translate-x-[7px]"></div>
+            <div className="absolute bg-orange-600 w-4 h-4 rounded-full bottom-[110px] -translate-x-[7px]"></div>
           </div>
-          <div>
-            <p className="text-gray-700 font-bold whitespace-nowrap">
-              Education
+          <div className="flex flex-col justify-around px-8 invisible lg:visible">
+            <p className="text-gray-700 font-bold ">Education</p>
+            <p className="text-gray-700 font-bold text-nowrap">
+              Software Skills
             </p>
+            <p className="text-gray-700 font-bold">Experience</p>
           </div>
 
           {/* Experience Description */}
           <div className="w-full h-auto ">
             {/* 1st layer */}
-            <div className="bg-white flex flex-col lg:flex-row justify-between item-center  w-full h-auto gap-4 rounded-lg">
+            <div
+              ref={layerOneRef}
+              className={`bg-white flex flex-col lg:flex-row justify-between item-center  w-full h-auto gap-4 rounded-lg ${
+                layerOneInView ? "animate-rise-up" : "opacity-0"
+              }`}
+            >
               {/* 1st */}
               <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4 relative">
                 <p className="font-bold text-xl">BSc in Computer Science</p>
@@ -73,7 +100,12 @@ export default function ResumeComponent() {
             </div>
 
             {/* 2nd layer */}
-            <div className="bg-white flex flex-col lg:flex-row  justify-around items-start lg:items-center w-full h-auto mt-10 gap-4 rounded-lg">
+            <div
+              ref={layerTwoRef}
+              className={`bg-white flex flex-col lg:flex-row  justify-around items-start lg:items-center w-full h-auto mt-10 gap-4 rounded-lg ${
+                layerTwoInView ? "animate-rise-up" : "opacity-0"
+              }`}
+            >
               {/* 1st */}
               <div className="flex flex-col justify-stretch items-center w-full min-h-[200px] p-4 relative">
                 <p className="font-bold text-xl">UI/UX Design</p>
@@ -140,14 +172,19 @@ export default function ResumeComponent() {
             </div>
 
             {/* 3rd layer */}
-            <div className="bg-white flex flex-col lg:flex-row justify-between items-center w-full h-auto gap-4 p-4 mt-10 rounded-lg">
+            <div
+              ref={layerThreeRef}
+              className={`bg-white flex flex-col lg:flex-row justify-between items-center w-full h-auto gap-4 p-4 mt-10 rounded-lg ${
+                layerThreeInView ? "animate-rise-up" : "opacity-0"
+              }`}
+            >
               {/* 1st */}
               <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4 relative">
                 <p className="font-bold text-xl">Web Developer & Trainer</p>
                 <p className="text-stone-600">
                   Brac Developer Team-(2012-2016)
                 </p>
-                <p className="text-stone-600">
+                <p className="text-stone-600 text-center">
                   Pomnis voluptas assumenda est, omnis dolor repellendus.
                 </p>
                 {/* straight Line */}
@@ -158,7 +195,7 @@ export default function ResumeComponent() {
               <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4 relative">
                 <p className="font-bold text-xl">Front-end Developer</p>
                 <p className="text-stone-600">Brane-(2020-2011)</p>
-                <p className="text-stone-600">
+                <p className="text-stone-600 text-center">
                   Pomnis voluptas assumenda est, omnis dolor repellendus.
                 </p>
                 <div className="absolute bg-gray-300 w-[2px] h-36 -right-2 top-1/2 transform -translate-y-1/2 invisible lg:visible"></div>
@@ -168,7 +205,7 @@ export default function ResumeComponent() {
               <div className="flex flex-col justify-stretch items-center min-h-[200px] p-4">
                 <p className="font-bold text-xl">UI/UX Designer</p>
                 <p className="text-stone-600">Google Out Tech-(2017-Present)</p>
-                <p className="text-stone-600">
+                <p className="text-stone-600 text-center">
                   Pomnis voluptas assumenda est, omnis dolor repellendus.
                 </p>
               </div>

@@ -5,6 +5,7 @@ import HomeBanner from "@/Components/HomeBannner/homeBanner";
 import Navbar from "@/Components/NavBar/navbar";
 import ServiceSection from "@/Components/Service/service";
 import ResumeComponent from "@/Components/ResumeComponent/resume";
+import ClientFeedback from "@/Components/ClientFeedback/clientFeedback";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutSection />
         <ServiceSection />
         <ResumeComponent />
+        <ClientFeedback />
       </div>
     </>
   );

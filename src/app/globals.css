@@ -30,7 +30,7 @@ body {
 }
 
 /* riseUp Animation */
-@keyframes riseUp {
+@keyframes rise-up {
   from {
     opacity: 0;
     transform: translateY(50px);
@@ -42,7 +42,7 @@ body {
 }
 
 .animate-rise-up {
-  animation: riseUp 1s ease-out forwards;
+  animation: rise-up 1s ease-out forwards;
 }
 /* till here */
 

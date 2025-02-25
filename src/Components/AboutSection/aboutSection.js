@@ -16,12 +16,12 @@ export default function AboutSection() {
 
   const [startAnimation, setStartAnimation] = useState(false);
   useEffect(() => {
-    if (experienceInView) {
+    if (experienceInView || buttonInView) {
       setStartAnimation(true);
     } else {
       setStartAnimation(false);
     }
-  }, [experienceInView]);
+  }, [experienceInView, buttonInView]);
 
   return (
     <>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
@@ -79,10 +79,20 @@ export default function ClientFeedback() {
   ]);
 
   const paginationRef = useRef(null);
+  const swiperInstance = useRef(null);
+
+  useEffect(() => {
+    if (swiperInstance.current && paginationRef.current) {
+      swiperInstance.current.params.pagination.el = paginationRef.current;
+      swiperInstance.current.pagination.init();
+      swiperInstance.current.pagination.render();
+      swiperInstance.current.pagination.update();
+    }
+  }, []);
   return (
     <>
       <div className="bg-white w-full h-[700px]">
-        <div className="bg-white container mx-auto">
+        <div className=" container mx-auto">
           {/* Heading */}
           <div className="flex flex-col justify-center items-center mt-20">
             <div className="flex flex-row justify-center items-center gap-2 w-full mt-20">
@@ -115,6 +125,8 @@ export default function ClientFeedback() {
               loop={true}
               pagination={{
                 clickable: true,
+                // bulletClass: "custom-bullet",
+                // bulletActiveClass: "swiper-pagination-bullet-active",
                 el: paginationRef.current,
                 renderBullet: (index, className) => {
                   return `<span class="${className} custom-bullet"></span>`;
@@ -126,12 +138,13 @@ export default function ClientFeedback() {
                 swiper.params.pagination.el = paginationRef.current;
                 swiper.pagination.init();
                 swiper.pagination.render();
+                swiper.pagination.update();
               }}
               className="relative pb-10 mySwiper"
             >
               {info.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <div className="bg-[#FFFAF7] hover:bg-[#fbefe8] flex flex-col justify-center px-10 py-8 rounded-lg select-none transition-colors duration-300 hover:shadow">
+                  <div className="bg-[#FFFAF7] hover:bg-[#fbefe8] flex flex-col justify-center px-10 py-8 rounded-lg select-none transition-colors duration-300 hover:shadow active:cursor-grab">
                     <div className="flex gap-5">
                       <div className="">{item.profilePic}</div>
                       <div className="flex flex-col justify-center items-start">

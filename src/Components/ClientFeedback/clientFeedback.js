@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import "swiper/css/pagination";
+import "swiper/css";
 
 export default function ClientFeedback() {
   const [info, setInfo] = useState([
@@ -70,6 +72,22 @@ export default function ClientFeedback() {
         />
       ),
     },
+    {
+      id: 5,
+      name: "Robert E. Wolf",
+      designation: "Director, Techso",
+      description:
+        "Contrary to popular belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+      profilePic: (
+        <Image
+          src={"/pic/testimonialThree.png"}
+          alt="Profile Pic"
+          width={100}
+          height={100}
+          className="w-full h-auto max-w-[80px] max-h-[80px]"
+        />
+      ),
+    },
   ]);
 
   return (
@@ -98,6 +116,10 @@ export default function ClientFeedback() {
           {/* Body */}
           <div className="mt-20 relative">
             <Swiper
+              className="custom-swiper"
+              style={{
+                "--swiper-pagination-color": "#ff6600",
+              }}
               slidesPerView={1}
               breakpoints={{
                 0: { slidesPerView: 1 },
@@ -111,16 +133,9 @@ export default function ClientFeedback() {
               spaceBetween={30}
               loop={true}
               pagination={{
-                el: ".custom-pagination",
                 clickable: true,
-                renderBullet: (index, className) => {
-                  return index < info.length
-                    ? `<span class="${className} custom-bullet"></span>`
-                    : "";
-                },
               }}
               modules={[Pagination, Autoplay]}
-              className="relative"
             >
               {info.map((item) => (
                 <SwiperSlide key={item.id}>
@@ -141,9 +156,6 @@ export default function ClientFeedback() {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            {/* Pagination */}
-            <div className="custom-pagination flex justify-center gap-3 mt-8"></div>
           </div>
         </div>
       </div>

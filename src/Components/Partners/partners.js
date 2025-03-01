@@ -1,9 +1,7 @@
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-
-import "swiper/swiper-bundle.css";
+import { Autoplay } from "swiper/modules";
 
 export default function Partners() {
   const partners = [
@@ -49,7 +47,7 @@ export default function Partners() {
       <div className="bg-white w-full h-auto">
         <div className="container mx-auto overflow-hidden">
           {/* heading */}
-          <div className="flex flex-col justify-center items-center ">
+          <div className="flex flex-col justify-center items-center mt-10">
             <div className="flex flex-row justify-center items-center gap-2 w-full mt-20">
               <Image
                 src={"/pic/orangeDot.png"}
@@ -70,27 +68,20 @@ export default function Partners() {
           {/* body */}
           <div className="relative mt-10">
             <Swiper
-              slidesPerView={5}
-              // breakpoints={{
-              //   0: { slidesPerView: 2 },
-              //   640: { slidesPerView: 3 },
-              //   1024: { slidesPerView: 4 },
-              // }}
+              slidesPerView={1}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                450: { slidesPerView: 2 },
+                640: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+              }}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
               spaceBetween={30}
               loop={true}
-              pagination={{
-                el: ".custom-pagination", // Connect to the custom pagination container
-                clickable: true,
-                renderBullet: (index, className) => {
-                  return `<span class="${className} custom-bullet"></span>`;
-                },
-              }}
-              modules={[Pagination, Autoplay]}
-              className="relative"
+              modules={[Autoplay]}
             >
               {partners.map((item) => (
                 <SwiperSlide key={item.id}>

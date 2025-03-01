@@ -75,7 +75,7 @@ export default function MyPortfolio() {
       <div className="container mx-auto">
         {/* Heading */}
         <div className="flex flex-col justify-center items-center">
-          <div className="flex flex-row justify-center items-center gap-2 w-full mt-20">
+          <div className="flex flex-row justify-center items-center gap-2 w-full ">
             <Image
               src={"/pic/orangeDot.png"}
               alt="Orange Dot Icon"

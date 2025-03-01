@@ -15,41 +15,6 @@
 
 /* This section is Added */
 
-/* Custom pagination bullets */
-.custom-pagination {
-  position: absolute;
-}
-
-.custom-bullet {
-  background-color: #ff6600 !important;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  opacity: 0.5;
-  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  position: relative; /* Needed for positioning the outer circle */
-  bottom: -50px;
-}
-
-/* Active bullet styling */
-.custom-bullet.swiper-pagination-bullet-active {
-  background-color: #f58c66 !important;
-  opacity: 1;
-}
-
-/* Outer circle for active bullet */
-.custom-bullet.swiper-pagination-bullet-active::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 17px; /* Circle size */
-  height: 17px;
-  border: 2px solid#f58c66; /* Outer circle color */
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .bg-dynamic {
   background-color: var(--bg-color);
 }

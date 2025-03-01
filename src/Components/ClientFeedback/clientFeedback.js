@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
-
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
-
-// import "./styles.css";
 
 export default function ClientFeedback() {
   const [info, setInfo] = useState([
@@ -14,7 +11,7 @@ export default function ClientFeedback() {
       name: "John K. Meraz",
       designation: "CTO, XYZ Group",
       description:
-        "Contray to populart belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature fr 45 BC, make it over 2000 years old",
+        "Contrary to popular belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
       profilePic: (
         <Image
           src={"/pic/testimonialOne.png"}
@@ -25,13 +22,12 @@ export default function ClientFeedback() {
         />
       ),
     },
-
     {
       id: 2,
       name: "Johan Smith",
       designation: "CEO, ABC Agency",
       description:
-        "Contray to populart belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature fr 45 BC, make it over 2000 years old",
+        "Contrary to popular belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
       profilePic: (
         <Image
           src={"/pic/testimonialTwo.png"}
@@ -42,13 +38,12 @@ export default function ClientFeedback() {
         />
       ),
     },
-
     {
       id: 3,
       name: "Robert E. Wolf",
       designation: "Director, Techso",
       description:
-        "Contray to populart belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature fr 45 BC, make it over 2000 years old",
+        "Contrary to popular belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
       profilePic: (
         <Image
           src={"/pic/testimonialThree.png"}
@@ -59,13 +54,12 @@ export default function ClientFeedback() {
         />
       ),
     },
-
     {
       id: 4,
       name: "Johan Smith",
       designation: "CEO, ABC Agency",
       description:
-        "Contray to populart belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature fr 45 BC, make it over 2000 years old",
+        "Contrary to popular belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
       profilePic: (
         <Image
           src={"/pic/testimonialTwo.png"}
@@ -78,21 +72,10 @@ export default function ClientFeedback() {
     },
   ]);
 
-  const paginationRef = useRef(null);
-  const swiperInstance = useRef(null);
-
-  useEffect(() => {
-    if (swiperInstance.current && paginationRef.current) {
-      swiperInstance.current.params.pagination.el = paginationRef.current;
-      swiperInstance.current.pagination.init();
-      swiperInstance.current.pagination.render();
-      swiperInstance.current.pagination.update();
-    }
-  }, []);
   return (
     <>
       <div className="bg-white w-full h-[700px]">
-        <div className=" container mx-auto">
+        <div className="container mx-auto">
           {/* Heading */}
           <div className="flex flex-col justify-center items-center mt-20">
             <div className="flex flex-row justify-center items-center gap-2 w-full mt-20">
@@ -112,8 +95,8 @@ export default function ClientFeedback() {
             </div>
           </div>
 
-          {/* body */}
-          <div className="mt-20">
+          {/* Body */}
+          <div className="mt-20 relative">
             <Swiper
               slidesPerView={1}
               breakpoints={{
@@ -121,26 +104,23 @@ export default function ClientFeedback() {
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
               }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               spaceBetween={30}
               loop={true}
               pagination={{
+                el: ".custom-pagination",
                 clickable: true,
-                // bulletClass: "custom-bullet",
-                // bulletActiveClass: "swiper-pagination-bullet-active",
-                el: paginationRef.current,
                 renderBullet: (index, className) => {
-                  return `<span class="${className} custom-bullet"></span>`;
+                  return index < info.length
+                    ? `<span class="${className} custom-bullet"></span>`
+                    : "";
                 },
               }}
-              // navigation={true}
-              modules={[Pagination, Navigation]}
-              onInit={(swiper) => {
-                swiper.params.pagination.el = paginationRef.current;
-                swiper.pagination.init();
-                swiper.pagination.render();
-                swiper.pagination.update();
-              }}
-              className="relative pb-10 mySwiper"
+              modules={[Pagination, Autoplay]}
+              className="relative"
             >
               {info.map((item) => (
                 <SwiperSlide key={item.id}>
@@ -161,10 +141,9 @@ export default function ClientFeedback() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div
-              ref={paginationRef}
-              className="custom-pagination flex justify-center gap-3 mt-8"
-            ></div>
+
+            {/* Pagination */}
+            <div className="custom-pagination flex justify-center gap-3 mt-8"></div>
           </div>
         </div>
       </div>

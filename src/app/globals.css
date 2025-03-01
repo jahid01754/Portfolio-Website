@@ -16,6 +16,10 @@
 /* This section is Added */
 
 /* Custom pagination bullets */
+.custom-pagination {
+  position: absolute;
+}
+
 .custom-bullet {
   background-color: #ff6600 !important;
   width: 12px;
@@ -24,6 +28,7 @@
   opacity: 0.5;
   transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
   position: relative; /* Needed for positioning the outer circle */
+  bottom: -50px;
 }
 
 /* Active bullet styling */

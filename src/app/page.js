@@ -7,6 +7,7 @@ import ServiceSection from "@/Components/Service/service";
 import ResumeComponent from "@/Components/ResumeComponent/resume";
 import ClientFeedback from "@/Components/ClientFeedback/clientFeedback";
 import MyPortfolio from "@/Components/MyPortfolio/myPortfolio";
+import Partners from "@/Components/Partners/partners";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ResumeComponent />
         <ClientFeedback />
         <MyPortfolio />
+        <Partners />
       </div>
     </>
   );

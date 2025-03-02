@@ -8,6 +8,7 @@ import ResumeComponent from "@/Components/ResumeComponent/resume";
 import ClientFeedback from "@/Components/ClientFeedback/clientFeedback";
 import MyPortfolio from "@/Components/MyPortfolio/myPortfolio";
 import Partners from "@/Components/Partners/partners";
+import MyBLog from "@/Components/MyBlog/myBlog";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <ClientFeedback />
         <MyPortfolio />
         <Partners />
+        <MyBLog />
       </div>
     </>
   );

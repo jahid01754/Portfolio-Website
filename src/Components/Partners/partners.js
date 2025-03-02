@@ -66,14 +66,14 @@ export default function Partners() {
           </div>
 
           {/* body */}
-          <div className="relative mt-10">
+          <div className="relative my-20">
             <Swiper
               slidesPerView={1}
               breakpoints={{
                 0: { slidesPerView: 1 },
                 450: { slidesPerView: 2 },
                 640: { slidesPerView: 3 },
-                1024: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 },
               }}
               autoplay={{
                 delay: 2500,

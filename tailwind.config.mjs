@@ -15,6 +15,7 @@ export default {
         primary: "#FF6B00",
         lightOrange: "#FFF5EB",
         feedback: "#FFF5EF",
+        contactRing: "#FFE1CC",
       },
       // container: {
       //   padding: {

@@ -9,6 +9,7 @@ import ClientFeedback from "@/Components/ClientFeedback/clientFeedback";
 import MyPortfolio from "@/Components/MyPortfolio/myPortfolio";
 import Partners from "@/Components/Partners/partners";
 import MyBLog from "@/Components/MyBlog/myBlog";
+import MyContact from "@/Components/MyContact/myContact";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <MyPortfolio />
         <Partners />
         <MyBLog />
+        <MyContact />
       </div>
     </>
   );

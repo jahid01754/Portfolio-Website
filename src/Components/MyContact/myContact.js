@@ -96,7 +96,7 @@ export default function MyContact() {
           </div>
 
           {/* Button */}
-          <div className="mt-10">
+          <div className="mt-10 pb-36">
             <Button label={"Send Me Message"} />
           </div>
         </div>

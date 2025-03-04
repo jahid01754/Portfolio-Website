@@ -10,6 +10,7 @@ import MyPortfolio from "@/Components/MyPortfolio/myPortfolio";
 import Partners from "@/Components/Partners/partners";
 import MyBLog from "@/Components/MyBlog/myBlog";
 import MyContact from "@/Components/MyContact/myContact";
+import FooterSection from "@/Components/FooterSection/footerSection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Partners />
         <MyBLog />
         <MyContact />
+        <FooterSection />
       </div>
     </>
   );

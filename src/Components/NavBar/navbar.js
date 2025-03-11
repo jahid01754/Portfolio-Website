@@ -10,17 +10,16 @@ export default function Navbar() {
 
   const NavLink1 = ({ href, children }) => (
     //function for Navigation Link
-    <Link href={href} className="group overflow-hidden py-5 ">
+    <a href={href} className="group overflow-hidden py-5 ">
       {children}
       <div className="transition-all duration-500 w-full bg-btn -translate-x-[101%] group-hover:translate-x-0 h-[2px]"></div>
-    </Link>
+    </a>
   );
   return (
     <>
       <div className=" w-full bg-dynamic md:bg-white py-8 mx-2">
         <nav className="container mx-auto  flex justify-between h-[85px]  bg-dynamic md:bg-white  top-0 m ">
           <div className="flex  justify-center items-center px-4">
-            {/* <p className="">Choion</p> */}
             <Link href={"/"}>
               <Image
                 src="/pic/Logo.png"
@@ -32,12 +31,12 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="hidden md:flex  justify-center items-center gap-6  ">
-            <NavLink1 href="/">Home</NavLink1>
-            <NavLink1 href="/About">About</NavLink1>
-            <NavLink1 href="/Services">Services</NavLink1>
-            <NavLink1 href="/Resume">Resume</NavLink1>
-            <NavLink1 href="/Portfolio">Portfolio</NavLink1>
-            <NavLink1 href="/Blog">Blog</NavLink1>
+            <NavLink1 href="#">Home</NavLink1>
+            <NavLink1 href="#About">About</NavLink1>
+            <NavLink1 href="#Services">Services</NavLink1>
+            <NavLink1 href="#Resume">Resume</NavLink1>
+            <NavLink1 href="#Portfolio">Portfolio</NavLink1>
+            <NavLink1 href="#Blog">Blog</NavLink1>
           </div>
           <div className="hidden md:flex justify-center items-center  ">
             <Button label={"Contact Us"} />
@@ -58,12 +57,12 @@ export default function Navbar() {
           ${menu ? "max-h-[500px]  py-6" : "max-h-[0]  py-0"}`}
         >
           <div className="flex flex-col items-start px-10  ">
-            <NavLink1 href="/">Home</NavLink1>
-            <NavLink1 href="/About">About</NavLink1>
-            <NavLink1 href="/Services">Services</NavLink1>
-            <NavLink1 href="/Resume">Resume</NavLink1>
-            <NavLink1 href="/Portfolio">Portfolio</NavLink1>
-            <NavLink1 href="/Blog">Blog</NavLink1>
+            <NavLink1 href="#">Home</NavLink1>
+            <NavLink1 href="#About">About</NavLink1>
+            <NavLink1 href="#Services">Services</NavLink1>
+            <NavLink1 href="#Resume">Resume</NavLink1>
+            <NavLink1 href="#Portfolio">Portfolio</NavLink1>
+            <NavLink1 href="#Blog">Blog</NavLink1>
           </div>
         </div>
       </div>

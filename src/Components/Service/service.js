@@ -53,7 +53,7 @@ export default function ServiceSection() {
   ];
   return (
     <>
-      <div className="bg-white mx-4 py-20">
+      <div className="bg-white mx-4 py-20" id="Services">
         <div className="container mx-auto">
           {/* Heading */}
           <div className="flex flex-col justify-center items-center">

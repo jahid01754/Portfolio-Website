@@ -23,7 +23,7 @@ export default function ResumeComponent() {
   }, [layerOneInView, layerTwoInView, layerThreeInView]);
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto" id="Resume">
         <div className="flex flex-col justify-center items-center mt-20">
           <div className="flex flex-row gap-2 justify-center items-center w-full">
             <Image

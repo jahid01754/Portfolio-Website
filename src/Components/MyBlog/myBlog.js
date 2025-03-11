@@ -22,7 +22,7 @@ export default function MyBLog() {
 
   return (
     <>
-      <div className="bg-white w-full h-auto">
+      <div className="bg-white w-full h-auto" id="Blog">
         <div className="container mx-auto">
           {/* heading */}
           <div className="flex flex-col justify-center items-center ">

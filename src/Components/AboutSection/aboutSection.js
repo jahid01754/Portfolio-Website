@@ -25,7 +25,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <div className="bg-white  mx-4">
+      <div className="bg-white  mx-4" id="About">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center py-20 md:py-40 gap-10 md:gap-20">
             {/* Left Section */}

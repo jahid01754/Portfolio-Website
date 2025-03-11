@@ -4,7 +4,7 @@ import Button from "../Button/button";
 export default function HomeBanner() {
   return (
     <>
-      <section className="bg-dynamic">
+      <section className="bg-dynamic" id="#">
         <div className="relative flex justify-center items-center w-full">
           <Image
             src="/pic/particleOne.png"
@@ -22,7 +22,7 @@ export default function HomeBanner() {
             {/* Left Section */}
             <div className=" flex flex-col justify-center items-center order-2 lg:order1 mt-5 sm:mt-10">
               <div>
-                <div className="flex justify-start items-center w-full">
+                <div className="flex justify-start items-center w-full gap-2">
                   <Image
                     src="/pic/orangeDot.png"
                     alt="Orange Dot"

@@ -71,7 +71,7 @@ export default function MyPortfolio() {
       : products.filter((product) => product.category === selectedCategories);
 
   return (
-    <div className="bg-white w-full ">
+    <div className="bg-white w-full" id="Portfolio">
       <div className="container mx-auto">
         {/* Heading */}
         <div className="flex flex-col justify-center items-center">

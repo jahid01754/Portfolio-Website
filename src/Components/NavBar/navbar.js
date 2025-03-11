@@ -21,16 +21,18 @@ export default function Navbar() {
         <nav className="container mx-auto  flex justify-between h-[85px]  bg-dynamic md:bg-white  top-0 m ">
           <div className="flex  justify-center items-center px-4">
             {/* <p className="">Choion</p> */}
-            <Image
-              src="/pic/Logo.png"
-              alt="Logo"
-              width="100"
-              height="100"
-              className="h-fit w-fit"
-            />
+            <Link href={"/"}>
+              <Image
+                src="/pic/Logo.png"
+                alt="Logo"
+                width="100"
+                height="100"
+                className="h-fit w-fit"
+              />
+            </Link>
           </div>
           <div className="hidden md:flex  justify-center items-center gap-6  ">
-            <NavLink1 href="">Home</NavLink1>
+            <NavLink1 href="/">Home</NavLink1>
             <NavLink1 href="/About">About</NavLink1>
             <NavLink1 href="/Services">Services</NavLink1>
             <NavLink1 href="/Resume">Resume</NavLink1>
@@ -56,7 +58,7 @@ export default function Navbar() {
           ${menu ? "max-h-[500px]  py-6" : "max-h-[0]  py-0"}`}
         >
           <div className="flex flex-col items-start px-10  ">
-            <NavLink1 href="#">Home</NavLink1>
+            <NavLink1 href="/">Home</NavLink1>
             <NavLink1 href="/About">About</NavLink1>
             <NavLink1 href="/Services">Services</NavLink1>
             <NavLink1 href="/Resume">Resume</NavLink1>

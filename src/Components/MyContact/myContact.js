@@ -31,9 +31,9 @@ export default function MyContact() {
           </div>
 
           {/* body */}
-          <div className="flex flex-row justify-between items-start mt-10 gap-10">
+          <div className="flex flex-col md:flex-row justify-between md:items-start mt-10 gap-10 px-7">
             {/* from */}
-            <div className="flex-1">
+            <div className="md:flex-1">
               <div className=" grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <input
                   type="text"
@@ -60,11 +60,16 @@ export default function MyContact() {
                   placeholder="Message"
                   className="w-full p-4 border border-orange-200 rounded-md outline-none focus:outline-2 focus:outline-slate-300 focus:ring-2 focus:ring-contactRing transition-all duration-300 ease-in-out col-span-1 sm:col-span-2 min-h-40 focus:shadow-lg resize-y leading-normal"
                 />
+
+                {/* Button */}
+                <div className="mt-10 md:pb-36">
+                  <Button label={"Send Me Message"} />
+                </div>
               </div>
             </div>
 
             {/* info */}
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 pb-20">
               <div className="flex flex-row  gap-4">
                 <div className="bg-dynamic flex justify-center items-center w-14 h-auto rounded-md">
                   <IoLocationSharp className="text-primary w-8 h-auto" />
@@ -96,9 +101,9 @@ export default function MyContact() {
           </div>
 
           {/* Button */}
-          <div className="mt-10 pb-36">
+          {/* <div className="mt-10 pb-36">
             <Button label={"Send Me Message"} />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

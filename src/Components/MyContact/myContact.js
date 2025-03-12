@@ -9,7 +9,7 @@ import Button from "../Button/button";
 export default function MyContact() {
   return (
     <>
-      <div className="bg-white w-full h-auto">
+      <div className="bg-white w-full h-auto" id="mycontact">
         <div className="container mx-auto">
           {/* heading */}
           <div className="flex flex-col justify-center items-center">

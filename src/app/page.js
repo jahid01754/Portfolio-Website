@@ -11,12 +11,14 @@ import Partners from "@/Components/Partners/partners";
 import MyBLog from "@/Components/MyBlog/myBlog";
 import MyContact from "@/Components/MyContact/myContact";
 import FooterSection from "@/Components/FooterSection/footerSection";
+import ScrollToTop from "@/Components/ScrollToTop/scrollToTop";
 
 export default function Home() {
   return (
     <>
       <div className="bg-dynamic h-full">
         <HomeBanner />
+        <ScrollToTop />
         <AboutSection />
         <ServiceSection />
         <ResumeComponent />

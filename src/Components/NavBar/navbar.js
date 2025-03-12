@@ -39,7 +39,9 @@ export default function Navbar() {
             <NavLink1 href="#Blog">Blog</NavLink1>
           </div>
           <div className="hidden md:flex justify-center items-center  ">
-            <Button label={"Contact Us"} />
+            <Link href={"#mycontact"}>
+              <Button label={"Contact Us"} />
+            </Link>
           </div>
           <div className="md:hidden flex items-center justify-center px-4">
             <GrMenu

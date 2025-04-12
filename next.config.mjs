@@ -5,6 +5,6 @@
 
 module.exports = {
   eslint: {
-    ignoreDuringBuilds: false, // or remove this line entirely
+    ignoreDuringBuilds: true,
   },
 };

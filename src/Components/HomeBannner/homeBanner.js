@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import Button from "../Button/button";
